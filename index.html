@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Video</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+        .video-container {
+            max-width: 100%;
+            width: 800px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video id="myVideo" autoplay loop playsinline>
+            <source src="./New Project 1 [C190B0C].mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('myVideo');
+            
+            // Ensure video plays
+            function playVideo() {
+                video.play().catch(function(error) {
+                    console.log("Video play failed:", error);
+                    // Try to play again after a short delay
+                    setTimeout(playVideo, 100);
+                });
+            }
+
+            // Start playing when the page loads
+            playVideo();
+        });
+    </script>
+</body>
+</html> 

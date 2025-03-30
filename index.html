@@ -17,11 +17,34 @@
         .video-container {
             max-width: 100%;
             width: 800px;
+            position: relative;
         }
         video {
             width: 100%;
             height: auto;
             display: block;
+        }
+        .register-btn {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
+        .register-btn:hover {
+            background-color: #cc0000;
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
         }
     </style>
 </head>
@@ -31,6 +54,7 @@
             <source src="./New Project 1 [C190B0C].mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <a href="https://linktr.ee/CYPHER_2K25" target="_blank" class="register-btn">Register Now</a>
     </div>
 
     <script>
